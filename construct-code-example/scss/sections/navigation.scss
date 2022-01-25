@@ -1,0 +1,134 @@
+.navigation {
+    display: none;
+    border: 1px solid $light-grey;
+    border-left: none;
+    border-right: none;
+
+    &.active {
+        display: block;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100vh;
+
+        background-color: $white;
+    }
+
+    @media (min-width: 768px) {
+        display: block;
+    }
+
+    &__burger {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 2;
+        width: 30px;
+        height: 20px;
+        cursor: pointer;
+
+        &::before, &::after, & span {
+            content: "";
+            background-color: $white;
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            transition: all .3s linear;
+        }
+
+        &::before {
+            top: 0;
+        }
+        
+        &::after {
+            bottom: 0;
+        }
+        
+        & span {
+            top: 9px;
+        }
+
+        &.active {
+            &::before {
+                transform: rotate(45deg);
+                top: 9px;
+                background-color: $primary;
+            }
+       
+            &::after {
+                transform: rotate(-45deg);
+                bottom: 9px;
+                background-color: $primary;
+            }
+       
+            & span {
+                transform: scale(0);
+                background-color: $primary;
+            }
+        }
+
+        @media (min-width: 768px) {
+            display: none;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        row-gap: 50px;
+
+        padding: 24px 0 23px;
+
+        text-align: center;
+
+        @media (min-width: 768px) {
+            text-align: left;
+            row-gap: 0;
+        }
+    }
+
+    &__logo {
+        flex: 1 1 100%;
+
+        @media (min-width: 768px) {
+            flex: 1 1 50%;
+        }
+    }
+
+    &__img {
+        max-width: 80px;
+    }
+}
+.nav {
+    flex: 1 1 100%;
+
+    @media (min-width: 768px) {
+        flex: 1 1 50%;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        row-gap: 30px;
+
+        @media (min-width: 768px) {
+            flex-direction: row;
+            row-gap: 0;
+        }
+    }
+    &__link {
+        font-size: 1.2rem;
+        font-weight: 600;
+        line-height: 1.17;
+        text-align: center;
+        letter-spacing: 1.09px;
+    }
+}

@@ -1,0 +1,124 @@
+.footer {
+    color: $white;
+
+    &__info {
+        padding: 42px 0;
+        background-color: $dark-2;
+        
+        font-size: 1.1rem;
+        line-height: 1.72;
+        letter-spacing: 0.85px;
+    }
+    &__copyright {
+        padding: 22px 0;
+        background-color: $dark-1;
+    }
+}
+
+.footer-info {
+    &__wrapper {
+        display: flex;
+        column-gap: 70px;
+        row-gap: 50px;
+        flex-wrap: wrap;
+
+        @media (min-width: 1024px) {
+            flex-wrap: nowrap;
+        }
+    }
+   
+    &__conpany {
+        box-sizing: border-box;
+        flex: 1 1 100%;
+
+        @media (min-width: 600px) {
+            flex: 1 1 calc(50% - 60px)
+        }
+
+        @media (min-width: 1024px) {
+            flex: 1 1 calc((100% / 6 * 2) - 60px);
+        }
+    }
+   
+    &__links {
+        box-sizing: border-box;
+        flex: 1 1 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        @media (min-width: 600px) {
+            flex: 1 1 calc(50% - 60px)
+        }
+
+        @media (min-width: 1024px) {
+            flex: 1 1 calc((100% / 6 * 2) - 60px);
+        }
+    }
+  
+    &__contact {
+        box-sizing: border-box;
+        flex: 1 1 100%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 15px;
+
+        @media (min-width: 600px) {
+            flex: 1 1 calc(50% - 60px)
+        }
+
+        @media (min-width: 1024px) {
+            flex: 1 1 calc((100% / 6) - 60px);
+        }
+    }
+    
+    &__socials {
+        max-width: 100px;
+
+        box-sizing: border-box;
+        flex: 1 1 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        @media (min-width: 600px) {
+            flex: 1 1 calc(50% - 60px)
+        }
+
+        @media (min-width: 1024px) {
+            flex: 1 1 calc((100% / 6) - 60px);
+        }
+    }
+}
+
+.company {
+    &__title {
+        margin-bottom: 19px;
+    }
+  
+    &__logo {
+        max-width: 102px;
+        margin-bottom: 15px;
+    }
+}
+
+.links {
+    &__title {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+.copyright {
+    &__text {
+        font-size: 1.1rem;
+        line-height: 1.17;
+        letter-spacing: 0.85px;
+        text-align: center;
+    }
+}

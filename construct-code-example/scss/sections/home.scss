@@ -1,0 +1,53 @@
+.home {
+    &__wrapper {
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        height: calc(100vh - 70px);
+        padding: 35px 0;
+        
+        color: $white;
+        line-height: 1.17;
+        text-align: center;
+        
+        @media (min-width: 768px) {
+            height: calc(100vh - 112px);
+            padding: 41px 0 71px;
+        }
+    }
+
+    &__bg {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__text {
+        font-size: 1.6rem;
+        font-weight: 600;
+    }
+
+    &__scroll {
+        font-size: 1.1rem;
+        font-weight: 600;
+        letter-spacing: 3.7px;
+    }
+}
+
+.logo {
+    &__img {
+        max-width: 102px;
+    }
+}

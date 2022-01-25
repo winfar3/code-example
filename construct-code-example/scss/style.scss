@@ -1,0 +1,75 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+
+    @font-face {
+    font-family: $font_name;
+    font-display: swap;
+    src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+    font-weight: #{$weight};
+    font-style: #{$style};
+    }
+}
+
+@import "reset.scss";
+@import "fonts.scss";
+@import "colors.scss";
+@import "styleText.scss";
+@import "sections/home.scss";
+@import "sections/navigation.scss";
+@import "sections/about.scss";
+@import "sections/services.scss";
+@import "sections/get-in-touch.scss";
+@import "sections/newsletter.scss";
+@import "sections/footer.scss";
+
+html {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    color: $primary;
+}
+
+body {
+    position: relative;
+    background-color: $white;
+}
+
+body.lock {
+    overflow: hidden;
+}
+
+.container {
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 11px 29px;
+
+    background-color: $secondary;
+
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 1.17;
+    letter-spacing: 0.5px;
+    color: $white;
+
+    &:hover {
+        color: $white;
+        background-color: $primary;
+    }
+
+    &_get-in-touch {
+        max-width: 150px;
+    }
+
+    &_subscribe {
+        box-sizing: border-box;
+        max-width: 150px;
+        border: none;
+    }
+}

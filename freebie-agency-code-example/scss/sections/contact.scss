@@ -1,0 +1,68 @@
+.contact {
+    grid-column: 1/-1;
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        
+        @media (min-width: 768px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        
+        padding: 70px 0 100px;
+        
+        text-align: center;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        &_work-together {
+            background-color: $sections-bg;
+            
+            @media (min-width: 768px) {
+                grid-column: 1/2;
+            }
+        }
+
+        &_contact-us {
+            background-color: $sections-bg-2;
+            
+            color: $white;
+            
+            @media (min-width: 768px) {
+                grid-column: 2/3;
+            }
+        }
+    }
+    &__image {
+        width: 35px;
+        height: 35px;
+        margin: 0 auto;
+    }
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    &__title {
+        margin-top: 19px;
+
+        font-family: 'Oswald', sans-serif;
+        font-size: 2.4rem;
+        line-height: 1.5;
+        letter-spacing: 2.67px;
+    }
+    &__description {
+        margin-top: 22px;
+
+        font-size: 1.4rem;
+        line-height: 1.2;
+        letter-spacing: 1.56px;
+        opacity: 80%;
+    }
+}

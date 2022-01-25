@@ -1,0 +1,45 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+
+    @font-face {
+    font-family: $font_name;
+    font-display: swap;
+    src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+    font-weight: #{$weight};
+    font-style: #{$style};
+    }
+}
+
+@import "reset.scss";
+@import "fonts.scss";
+@import "colors.scss";
+@import "styleText.scss";
+@import "sections/first-screen.scss";
+@import "sections/about-me.scss";
+@import "sections/skills.scss";
+@import "sections/portfolio.scss";
+@import "sections/contacts.scss";
+
+
+html {
+    font-family: 'Gilroy';
+    font-size: 10px;
+    font-weight: 500;
+    color: $text-color;
+}
+
+body {
+    background-color: $background-light;
+}
+
+.container {
+    max-width: 943px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    @media (min-width: 375px) {
+        padding: 0 29px;
+    }
+    @media (min-width: 1024px) {
+        padding: 0;
+    }
+}

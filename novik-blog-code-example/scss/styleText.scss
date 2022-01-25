@@ -1,0 +1,29 @@
+p {
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.21;
+    color: $text-color-2;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: color .2s linear;
+    &:hover {
+        color: $text-color-2;
+    }
+}
+
+h1 {
+    font-size: 4.7rem;
+    font-weight: 700;
+    line-height: 1.24;
+}
+
+h2 {
+    font-size: 3.4rem;
+    font-weight: 700;
+    line-height: 1.24;
+    text-align: center;
+    color: $text-color-2;
+}

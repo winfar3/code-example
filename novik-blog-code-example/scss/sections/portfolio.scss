@@ -1,0 +1,70 @@
+.portfolio {
+    background-color: $background-grey;
+
+    &__wrapper {
+        padding: 81px 0;
+        @media (min-width: 900px) {
+            padding-bottom: 112px 0px;
+        }
+    }
+
+    &__lable {
+        margin-bottom: 64px;
+        @media (min-width: 900px) {
+            margin-bottom: 47px;
+        }
+    }
+ 
+    &__example {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 33px;
+ 
+        @media (min-width: 900px) {
+            gap: 45px;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 78px;
+  
+            @media (min-width: 900px) {
+                margin-bottom: 99px;
+            }
+        }
+    }
+  
+    &__img {
+        position: relative;
+        width: 100%;
+        height: auto;
+
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+   
+    &__img-link {
+        display: block;
+        cursor: pointer;
+        width: 100%;
+    }
+  
+    &__link {
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 1.21;
+        text-align: center;
+
+        &:hover {
+            color: $text-ligth-grey;
+        }
+
+        @media (min-width: 1024px) {
+            text-decoration: underline;
+        }
+    }
+}

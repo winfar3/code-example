@@ -1,0 +1,89 @@
+.skills {
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 91px 0 110px;
+    }
+  
+    &__label {
+        margin-bottom: 50px;
+ 
+        @media (min-width: 900px) {
+            margin-bottom: 69px;
+        }
+    }
+ 
+    &__description {
+        max-width: 485px;
+        text-align: center;
+  
+        &:not(:last-child) {
+            margin-bottom: 70px;
+            
+            @media (min-width: 900px) {
+                margin-bottom: 83px;
+            }
+        }
+    }
+ 
+    &__cards {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        row-gap: 81px;
+        
+        width: 100%;
+        
+        @media (min-width: 425px) {
+            justify-content: space-between;
+        }
+    }
+  
+    &__card {
+        flex: 1 1 100%;
+
+        @media (min-width: 500px) {
+            flex: 1 1 50%;
+        }
+ 
+        @media (min-width: 900px) {
+            flex: 1 1 25%;
+        }
+    }
+}
+.card-skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 206px;
+
+    &__name {
+        max-width: 90px;
+        min-height: 35px;
+
+        font-size: 1.4rem;
+        font-weight: 700;
+        line-height: 1.24;
+        text-align: center;
+        color: $text-ligth-grey;
+    }
+ 
+    &__rank {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 167px;
+    }
+ 
+    &__star {
+        width: 26.07px;
+        height: 26px;
+        &_black {
+            filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(210deg) brightness(0%) contrast(80%);
+        }
+    }
+}
